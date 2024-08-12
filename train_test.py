@@ -16,7 +16,7 @@ def train(epoch, model, device, train_loader, optimizer, criterion, scheduler, w
         classification_loss = criterion(output, labels)
         mmd_loss = model.mmd_loss(conv_features, mlp_features)
 
-        total_loss = classification_loss + 1 * mmd_loss  # 可调整MMD损失的权重
+        total_loss = classification_loss + 1 * mmd_loss 
         total_loss.backward()
         optimizer.step()
         scheduler.step()
