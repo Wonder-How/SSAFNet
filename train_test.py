@@ -23,6 +23,7 @@ def train(epoch, model, device, train_loader, optimizer, criterion, scheduler, w
         optimizer.step()  # Update model parameters
         scheduler.step()  # Update learning rate schedule
 
+
         classification_losses.append(classification_loss.item())  # Log classification loss
         mmd_losses.append(mmd_loss.item())  # Log MMD loss
 
@@ -67,4 +68,5 @@ def test(model, device, test_loader, criterion, writer, epoch):
 
     # Print test metrics
     print(f'\nTest set: Average loss: {test_loss:.6f}, Accuracy: {accuracy*100:.6f}%, Recall: {recall*100:.6f}%, Specificity: {specificity*100:.6f}%, Precision: {precision*100:.6f}%, F1 Score: {f1*100:.6f}%\n')
+
     return accuracy, recall, specificity, precision, f1
