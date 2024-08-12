@@ -1,4 +1,4 @@
-from models import CAModel as ConvNet
+from models import SSANet as ConvNet
 from models import MLPFeatureExtractor, CombinedModel
 from datasets import EEGDataset, EntropyDataset, CombinedDataset
 from train_test import train, test

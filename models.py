@@ -89,9 +89,9 @@ class SSAM(nn.Module):
         return self.sigmoid(out)
 
 
-class CAModel(nn.Module):
+class SSANet(nn.Module):
     def __init__(self,EEG_length):
-        super(CAModel, self).__init__()
+        super(SSANet, self).__init__()
         self.EEG_length = EEG_length
         self.conv1 = nn.Conv1d(6, 32, 3)
         self.ca1 = SSAM(32)
