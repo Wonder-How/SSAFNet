@@ -11,7 +11,6 @@ def train(epoch, model, device, train_loader, optimizer, criterion, scheduler, w
         data_conv = data_conv.to(device)  # Move convolutional data to device (GPU/CPU)
         data_mlp = data_mlp.to(device)  # Move MLP data to device
         labels = labels.to(device)  # Move labels to device
-
         optimizer.zero_grad()  # Clear gradients before calculating them
         output, conv_features, mlp_features = model(data_conv, data_mlp)  # Perform a forward pass
         classification_loss = criterion(output, labels)  # Calculate classification loss
