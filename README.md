@@ -1,4 +1,4 @@
-# SSAFNet-README
+# README
 
 The code is the official implement of SSAFNet, which was designed for EEG depression recognition. We proposed SSANet to extract the time-space domain feature of the EEG data and employed diffential entropy to extract the frequency domain feature. Finally we designed a fusion model to combine two domains' feature. Read the code for details.
 
