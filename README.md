@@ -21,7 +21,7 @@ pip install requirements.txt
 
 The SSAFNet will employ two types of data. One is the differential entropy characteristics of EEG and the other one is the EEG timing signals. 
 
-The EEG differential entropy information is stored in a csv file, and the first column identifies whether depression is 1, depression is 0, normal is 0. The next 15 are listed as differential entropy data, and columns 2-6, 7-11, and 12-16 are the information of three leads respectively, and the differential entropy of each lead is divided into five bands, namely delta,theta,alpha,beta, and gamma bands.
+The EEG differential entropy information is stored in a csv file, and the first column identifies whether depression is 1 and normal is 0. The next 15 are listed as differential entropy data, and columns 2-6, 7-11, and 12-16 are the information of three leads respectively, and the differential entropy of each lead is divided into five bands, namely delta,theta,alpha,beta, and gamma bands.
 
 The EEG timing data used in the model is divided into six parts, namely the original data and the filtered information of five frequency bands. The csv file is organized the same for each of the data. The first three columns are subject, experiment round, and depression marker (subject and experiment round were not used in this model). The next 3000 columns are timing data for Fp1,Fpz, and Fp2, with 1000 data points per lead.
 
